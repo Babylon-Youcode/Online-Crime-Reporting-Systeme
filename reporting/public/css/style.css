@@ -1,0 +1,90 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  font: 400 1rem/1.5 "GothamPro",Arial,sans-serif;
+  color: #000;
+  background-color: transparent;
+  width: 100%;
+
+
+}
+header{
+  background-color:#0b0e11 ;
+}
+
+#hero{
+  background-image: url(/img/2section.jpg);
+  background-size: 100% ;
+  background-position: center center;
+  background-repeat: no-repeat ;
+
+}
+.warper-text{
+  font-size: 50px;
+  position: absolute;
+  margin: 10% 10%;
+ color: #fff;
+
+}
+
+
+
+/*
+}section2
+--------------------------------------------------------------*/
+/*  */
+
+#section2 {
+  background-image: url(/img/background.jpg);
+  
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-3 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  margin-top: 40px;
+}
+
+
+/* rtl:begin:ignore */
+.marketing .col-lg-3 p {
+  margin-right: .75rem;
+  margin-left: .75rem;
+}
+/* rtl:end:ignore */
+
+
+#why{
+ font-weight: bolder;
+ font-size: 50px;
+ line-height: 60px;
+ font-family: 'Raleway', sans-serif;
+ color: #000;
+ 
+}
+
+#services{
+  display: block;
+  width: 1170px;
+
+}
+
+.fadeInDown{
+ 
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px, rgba(0, 0, 0, 0.08) 0px 0px 2px;
+
+}
+.fadeInDown:hover{
+  background-color: #378a37;
+}
+
