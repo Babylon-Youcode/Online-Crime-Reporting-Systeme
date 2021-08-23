@@ -85,7 +85,7 @@ class ReportsController extends Controller
     {
         $reports = Reports::find($req->id);
         $reports->update([
-            'reports_status'=> 'Done'
+            'reports_status'=> 'In progress'
         ]);
 
         return redirect()->back();
@@ -120,8 +120,16 @@ class ReportsController extends Controller
      * @param  \App\Models\reports  $reports
      * @return \Illuminate\Http\Response
      */
-    public function destroy(reports $reports)
+ 
+    public function destroy($reports_id)
     {
-        //
+        $reports = Reports::findOrFail($reports_id);
+        $reports->delete();
+
+        return redirect()->back();
     }
 }
+
+
+    
+

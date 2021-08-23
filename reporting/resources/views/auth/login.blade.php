@@ -35,33 +35,33 @@
 
     </style>
 
-
-    <!-- Custom styles for this template -->
-    <link href="signin.css" rel="stylesheet">
 </head>
-<div class="">
-    <header class=" p-3 d-flex align-items-center justify-content-center justify-content-md-between">
-    <img src="img/logo3.png" class="d-flex align-items-center col-md-2 " width="100" height="40">
- 
-    <ul class="nav col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="" class="nav-link px-2 text-white">  <i class="fas fa-home"></i> Home</a></li>
-      <li><a href="{{ route('news') }}" class="nav-link px-2 text-white">News</a></li>
-      <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-    </ul>
 
+<body>
+    <div class="">
+     <header class="p-4 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+        <img src="img/logo3.png" class="d-flex align-items-center col-md-2 " width="100" height="40">
+     
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="{{ route('home')}}" class="nav-link px-2 text-white">  <i class="fas fa-home"></i> Home</a></li>
+          <li><a href="{{ route('news') }}" class="nav-link px-2 text-white">News</a></li>
+        </ul>
+    
+          <div class="col-md-3 text-end">
+          
+          </div>
     </header>
-</div>
-
-<body class="text-center" style="background-image: url(background.jp);">
+    </div>
+ 
 
     <main class="form-signin">
         <form method="POST" action="{{ route('login') }}">
             @csrf
-            <h1 class="h3 mb-3 fw-normal">sign in</h1>
+            <h1 class="h3 mb-3 fw-normal text-center">Sign In</h1>
 
-            <div class="">
+            <div class="input-div">
                 <label for="email">{{ __('E-Mail Address') }}</label>
-                <input id="email" type="email" class="form-control" @error('email') is-invalid @enderror" name="email"
+                <input id="email" type="email" class="form-control" @error('email') is-invalid @enderror name="email"
                     value="{{ old('email') }}" required autocomplete="email" autofocus class="form-control">
 
                 @error('email')
@@ -72,10 +72,10 @@
             </div>
             </div>
 
-            <div class="">
+            <div class="input-div">
                 <label for="">{{ __('Password') }}</label>
 
-                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
+                <input id="password" type="password" @error('password') is-invalid @enderror"
                     name="password" required autocomplete="current-password" class="form-control" placeholder="">
                 @error('password')
                     <span class="invalid-feedback" role="alert">
@@ -84,10 +84,10 @@
                 @enderror
 
             </div>
-            <div class="form-group row">
-                <div class="col-md-6 offset-md-4">
+            <div class="form-group row text-center">
+                <div class="col-md-10">
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" id="remember"
+                        <input type="checkbox" name="remember" id="remember"
                             {{ old('remember') ? 'checked' : '' }}>
 
                         <label class="form-check-label" for="remember">
@@ -118,6 +118,10 @@
     </main>
 
 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/aae4dc3f4b.js" crossorigin="anonymous"></script>
 
 </body>
 

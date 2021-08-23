@@ -23,10 +23,24 @@
         <li><a href="{{ route('news') }}" class="nav-link px-2 text-white">News</a></li>
       </ul>
   
-        <div class="col-md-3 text-end">
-        <a href="{{ route('login') }}" type="button" class="btn btn-outline-light me-2">Login</a>
-        <a href="{{ route('register') }}" type="button" class="btn btn-warning">Sign-up</a>
+      <div class="text-end" style="color: white">
+        <i id="icon" class="far fa-user"></i>
+      <a >{{ Auth::user()->name }} </a>
+  
+        
+        <a class="btn btn-light" href="{{ route('logout') }}"
+              onclick="event.preventDefault();
+                            document.getElementById('logout-form').submit();">
+               {{ __('Logout') }}
+        </a>
+  
+        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+               @csrf
+        </form>
       </div>
+     </header> 
+    </div>
+        
     </header>
     </div>
 
@@ -36,7 +50,7 @@
       <div class="cards_item"> 
         <div class="card">
           <div class="card_image">
-            <img class="" src="{{asset('img/newsimages/'.$item->image)}}" class="card-img-top"  height="350px"  alt="...">
+            <img class="" src="{{asset('img/'.$item->image)}}" class="card-img-top"  height="300px"  alt="...">
             <div class="card_content">
               <h2 class="card_title">{{$item->title}}</h2>
               <p class="card_text">{{$item->discription}}.</p>

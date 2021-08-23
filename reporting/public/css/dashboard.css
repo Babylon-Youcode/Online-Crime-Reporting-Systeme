@@ -101,14 +101,79 @@ body {
     border-color: transparent;
     box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
   }
-#panel{
 
-    box-shadow: 2px 2px 8px 1px red;
-}
 .count{
   align-items: center;
   margin: auto;
   width: 60%;
   padding: 10px;
+}
+
+.news-form{
+  
+  margin: auto;
+  width: 1170px ;
+  padding: 10px;
+  padding-right: 15px;
+  padding-left: 150px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+label{
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+input{
+  border: 1px solid #aaaaaa;
+  background-color: #f5f5f5;
+  font-size: 27px;
+  color: #000;
+  padding: 15px;
+  min-width: 350px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+form{
+  width: 848px;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(2,auto);
+  gap: 10px;
+}
+form .left-column > div,
+form .right-column > div{
+  margin: 10px;
+}
+label span{
+  color: red;
+}
+
+.upload{
+  margin: auto;
+  background: none;
+  border: none;
+}
+textarea{
+  border: 1px solid #aaaaaa;
+  background-color: #f5f5f5;
+  margin: 0px;
+  width: 353px;
+  height: 119px;
+  /* resize: none; */
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button[type="submit"]{
+  color: white;
+  background: linear-gradient(180deg,#F8D12F 0%,#F0B90B 100%);
+
+  font-size: 19px;
+  width: calc(100% + 100%);
+  margin-left: 8px;
+  padding: 13px;
+  cursor: pointer;
 }
   

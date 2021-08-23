@@ -31,6 +31,15 @@ class AnnonceController extends Controller
             'ans' => $an
         ]);
     }
+    
+    public function usernews()
+    {
+        $an = Annonce::all();
+        // return $an;
+        return view('usernews',[
+            'ans' => $an
+        ]);
+    }
 
     /**
      * Show the form for creating a new resource.
@@ -54,7 +63,7 @@ class AnnonceController extends Controller
     {
         if($input->image){
             $imageName = date('mdYHis').uniqid().'.'.$input->image->extension();
-            $input->image->move(public_path('img'), $imageName);
+            $input->image->move(public_path('img/newsimages/'), $imageName);
             
         };
         Annonce::create([

@@ -16,17 +16,16 @@
 <body>
 
   <div class="">
-   <header class=" p-3 d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
+   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between">
     <img src="img/logo3.png" class="d-flex align-items-center col-md-2 " width="100" height="40">
  
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
       <li><a href="{{ route('home') }}" class="nav-link px-2 text-white">  <i class="fas fa-home"></i> Home</a></li>
-      <li><a href="{{ route('news') }}" class="nav-link px-2 text-white">News</a></li>
-      <li><a href="#" class="nav-link px-2 text-white">About</a></li>
+      <li><a href="{{ route('user.news') }}" class="nav-link px-2 text-white">News</a></li>
 
     </ul>
 
-    <div class="text-end" style="color: white">
+  <div class="text-end" style="color: white">
       <i id="icon" class="far fa-user"></i>
     <a >{{ Auth::user()->name }} </a>
 
@@ -45,15 +44,15 @@
   </div>
 
   <!-- End Header -->
-  <div id="services" class="container text-center">
+  <div class="container text-center mt-5">
     <h2>
-      <span> Services</span>
+      <span class="article">Services</span>
     </h2>
-    <div class="d-flex">
+    <div id="services" class="d-flex p-5">
       <div class="col-sm-6 col-xs-12 text-center fadeInDown"> 
         <div class="content">
           <h3>
-            <a href="{{ route('raport.create') }}" class="nav-link px-2 text-dark">Reporting</a></h3>
+            <a href="{{ route('raport.create') }}" class="nav-link px-2 text-dark">New Reporting</a></h3>
         <div>
           <i class="far fa-lightbulb"></i>
           </div>  
@@ -63,7 +62,7 @@
       <div class="col-sm-6 col-xs-12 text-center fadeInDown animated"> 
         <div class="content">
           <h3>
-            <a href="{{ route('raport.veiw') }}" class="nav-link px-2 text-dark">Reporting</a></h3>
+            <a href="{{ route('raport.veiw') }}" class="nav-link px-2 text-dark"> My Reportings</a></h3>
 
           </h3>
         <div>

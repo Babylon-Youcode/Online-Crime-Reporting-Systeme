@@ -1,39 +1,19 @@
-{{-- 
-    <form action="{{ route('dash.annonces.update',$annonce->id) }}" method="POST"> 
-        @csrf
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label"> title</label>
-          <input type="title" name="title" value="{{ $annonce->title }}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label"> write a discription here</label>
-          <input type="text" name="discription" value="{{ $annonce->discription }}" class="form-control" id="exampleInputPassword1">
-        </div>
-        
-        <div class="mb-3">
-        <label for="exampleFormControlFile1">Add image</label>
-        <input type="file" name="image" value="{{ $annonce->image }}" class="form-control-file" id="exampleFormControlFile1">
-        </div> 
-
-        <div class="mb-3">
-            <label for="exampleFormControlFile1">date</label>
-            <input type="date" name="date" value="{{ $annonce->date }}" class="form-control-file" id="exampleFormControlFile1">
-            </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form> --}}
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>edit News</title>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.82.0">
+    <title> Reports </title>
 
-    <link rel="stylesheet" href="/css/dashboard.css">   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-
-</head>
+  
+    <link href="/css/dashboard.css" rel="stylesheet">
+  </head>
+    
+  
 <body>
   <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
     <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Crime Rporting Systeme</a>
@@ -90,7 +70,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="{{ route('veiw.users') }}">
+              <a class="nav-link" href="#">
                 <i class="far fa-address-card"></i>
                 <span data-feather="bar-chart-2"></span>
                 View Users
@@ -102,40 +82,38 @@
   
       <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
   
-        <h2>Add News</h2>
-
-        <div class="news-form">
-          <form action="{{ route('dash.annonces.update',$annonce->id) }}" method="POST" enctype="multipart/form-data">
-            @csrf
-            <div class="left-column">
-                <div>
-                  <label> Title </label>
-                  <input name="title" value="{{ $annonce->title }}" id="exampleFormControlFile1">
-                </div>
-                <div>
-                  <div>
-                    <label for="br">Date</label>
-                    <input type="date" name="date" value="{{ $annonce->date }}" id="br" cols="30" rows="10">
-                </div>
-                    
-                </div>
-                <div>
-                  <label > Image</label>
-                  <input type="file" class="upload" name="image" value="{{ $annonce->image }}" id="exampleFormControlFile1">
-              </div>
-            </div>
-            <div class="right-column">
-              <div>
-                <label for="pa"> Description</label>
-                <textarea name="discription" > {{ $annonce->discription }} </textarea>
-                  
-              </div>
-            </div>
-            
-            <button type="submit" value="Confirme"> Confirme </button>
-        </form>
-        </div>
-        
+        <h2>All users</h2>
+        <div class="table-responsive"  id="panel">
+          <div class="panel panel-default ">
+            <table class="table table-bordered">
+              <thead class="table table-bordered table-dark">
+                  <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">name</th>
+                      <th scope="col">email</th>
+                      <th scope="col">type</th>
+ 
+                      
+                  </tr>
+              </thead>
+              <tbody >
+          
+          
+                  @foreach ($user as $item)
+                      <tr>
+                          <th scope="row">{{$item->id}}</th>
+                          <td>{{$item->name}}</td>
+                          <td>{{$item->email}}</td>
+                          <td>{{$item->type}}</td>
+                         
+                      </tr>
+                  @endforeach
+          
+              </tbody>
+          </table>
+  </div>
+      </div>
+     
   </div>
   
   </div>
@@ -145,11 +123,12 @@
     </div>
   </div>
 
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
  
   <script src="https://kit.fontawesome.com/aae4dc3f4b.js" crossorigin="anonymous"></script>
-    
 </body>
+
+
+
+
 </html>

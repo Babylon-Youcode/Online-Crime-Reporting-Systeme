@@ -15,12 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 //// home route ///// 
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
 
 Route::get('/', function () {
     return view('home');
 });
 
 ////////////////////////
+
 
 Auth::routes();
 
@@ -36,11 +39,16 @@ Route::middleware(['auth'])->group(function () { // is login
     Route::post('Report/store', [App\Http\Controllers\ReportsController::class,'store'])->name('raport.store');
     Route::get('Report/index', [App\Http\Controllers\ReportsController::class,'index'])->name('dash.report');
     Route::get('Report/status/{id}', [App\Http\Controllers\ReportsController::class,'update_status'])->name('update_status');
+    Route::get('/report/delete/{reports_id}', [App\Http\Controllers\ReportsController::class,'destroy'])->name('report.delete');
+
+    Route::get('users', [App\Http\Controllers\HomeController::class,'veiwusers'])->name('veiw.users');
+
 
 
 
     // annonce routes
 
+Route::get('/annonce', [App\Http\Controllers\AnnonceController::class,'usernews'])->name('user.news');
 
 Route::get('/annonces', [App\Http\Controllers\AnnonceController::class,'index'])->name('dash.annonces');
 Route::get('/annonces/create', [App\Http\Controllers\AnnonceController::class,'create'])->name('dash.annonces.create');
@@ -66,7 +74,6 @@ Route::get('news', [App\Http\Controllers\AnnonceController::class,'news'])->name
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 // -----------------------------login-----------------------------------------
 // Route::get('/login', 'App\Http\Controllers\Auth\LoginController@login')->name('login');

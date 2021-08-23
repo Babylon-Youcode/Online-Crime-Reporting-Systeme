@@ -65,7 +65,7 @@
                       </li>
                     <li class="nav-item">
                       <a href="{{ route('dash.annonces.create') }}"class="nav-link" href="#">
-                        <i class="far fa-newspaper"></i>
+                        <i class="fas fa-plus"></i>
                         Add News
                       </a>
                       
@@ -73,17 +73,20 @@
                     <li class="nav-item">
                       <a href="{{ route('dash.report') }}" class="nav-link" href="#">
                         <span data-feather="shopping-cart"></span>
+                        <i class="fas fa-link"></i>
                          Report Issues
                       </a>
                     </li>
                     <li class="nav-item">
                       <a href="{{ route('dash.annonces') }}" class="nav-link" href="#">
                         <span data-feather="users"></span>
+                        <i class="far fa-newspaper"></i>
                         Veiw News
                       </a>
                     </li>
                     <li class="nav-item">
-                      <a class="nav-link" href="#">
+                      <a href="{{ route('veiw.users') }}" class="nav-link" href="#">
+                        <i class="far fa-address-card"></i>
                         <span data-feather="bar-chart-2"></span>
                         View Users
                       </a>
@@ -97,8 +100,6 @@
                 <button type="button" class="btn btn-primary position-relative">
                   total users <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">{{ $usercount }} <span class="visually-hidden">unread messages</span></span>
                 </button>
-               
-                <button type="button" class="btn btn-warning" width="500" height="40"> {{ $usercount }}</button>
                 <button type="button" class="btn btn-warning"> issues {{ $reportscount }}  </button>
               
               </div>

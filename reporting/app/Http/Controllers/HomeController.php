@@ -55,5 +55,13 @@ class HomeController extends Controller
         return view('home');
     }
     
+
+    public function veiwusers()
+    {
+        $user = User::all();
+        return view('usersindex',[
+            'user' => $user
+        ]);
+    }
 }
 
