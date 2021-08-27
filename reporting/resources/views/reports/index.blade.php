@@ -115,8 +115,20 @@
           
                           
                           <td>
-                            <a class="btn btn-danger"href="{{ route('report.delete',$item->id) }}">delete</a>
-                            <a  href="{{ route('update_status',$item->id) }}" class="btn btn-warning">update status </a>
+                            <a class="btn btn-danger" href="{{ route('report.delete',$item->id) }}"  onclick= " return confirm( 'Are you sure' ) ">delete</a>
+                            
+
+                            <form class="form-control m-2" action="{{ route('update_status',$item->id) }}" method="get" >
+                              @csrf 
+
+                            <select class="form-select form-select-sm mb-2 ropdown-menu " name="reports_status"  id="" placeholder="Action">
+                              <option value="under treatement">under treatment</option>
+                              <option value="in progress">in progress</option>
+                              <option value="done">done</option>
+                              <option value="rejected">rejected</option>
+                             </select>
+                             <button class="btn btn-warning" onclick= " return confirm( 'Are you sure' )"  value="Confirme"> Confirme </button>        
+                            </form>
                           </td>
                           
           

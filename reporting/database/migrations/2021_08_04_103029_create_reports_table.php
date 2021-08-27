@@ -18,8 +18,8 @@ class CreateReportsTable extends Migration
             $table->string("crime_type");
             $table->string("victim_name");
             $table->string("victim_adresse");
-            $table->string("discription");
-            $table->string("victim_image");
+            $table->string("discription")->nullable();
+            $table->string("victim_image")->nullable();
             $table->date("crime_date");
             $table->foreignId('user_id')->constrained();
             $table->string("reports_status");

@@ -96,11 +96,14 @@
               </nav>
           </div>
 
-              <div class="count">  
-                <button type="button" class="btn btn-primary position-relative">
+              <div class="count ">  
+                <button type="button" class="btn btn-primary position-relative m-3">
                   total users <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">{{ $usercount }} <span class="visually-hidden">unread messages</span></span>
                 </button>
-                <button type="button" class="btn btn-warning"> issues {{ $reportscount }}  </button>
+                <button type="button" class="btn btn-warning position-relative">
+                  total Issues <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-secondary">{{ $reportscount }} <span class="visually-hidden">unread messages</span></span>
+                </button>
+             
               
               </div>
 

@@ -36,7 +36,8 @@
       <div class="cards_item"> 
         <div class="card">
           <div class="card_image">
-            <img class="" src="{{asset('img/newsimages/'.$item->image)}}" class="card-img-top"  height="350px"  alt="...">
+            
+            <img class="" src="{{asset('img/newsimages/'.$item->image)}}" class="img_th"  alt="...">
             <div class="card_content">
               <h2 class="card_title">{{$item->title}}</h2>
               <p class="card_text">{{$item->discription}}.</p>

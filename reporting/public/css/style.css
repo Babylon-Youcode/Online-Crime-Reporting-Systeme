@@ -169,12 +169,14 @@ About Us Style
 
 /* NEWS START */
 
-.card_image{
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
-
+.img_th{
+ 
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+ 
 }
+
 .card_date{
   padding: 0.8rem;
   font-size: 14px;
@@ -196,7 +198,7 @@ About Us Style
 
 .cards_item {
   display: flex;
-  padding: 1rem;
+  padding: 3rem;
 }
 
 @media (min-width: 40rem) {
@@ -218,9 +220,11 @@ About Us Style
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  
 }
 
 .card_content {
+  height: auto;
   padding: 1rem;
   background: linear-gradient(to bottom left, #ff3b2d 40%, #ff305c 100%);
 }
@@ -253,8 +257,12 @@ About Us Style
 #services{
   margin: auto;
   align-items: center;
-  width: 900px;
-  gap: 20px;
+  justify-content: center;
+  max-width: 900px;
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+
 
 }
 
@@ -267,6 +275,18 @@ About Us Style
 }
 .fadeInDown:hover{
   background: linear-gradient(180deg,#F8D12F 0%,#F0B90B 100%);
+}
+@media (min-width: 56rem) {
+  #services {
+    display: flex;
+  }
+}
+
+@media (min-width: 40rem) {
+  #services{
+    display: flex;
+
+  }
 }
 
 

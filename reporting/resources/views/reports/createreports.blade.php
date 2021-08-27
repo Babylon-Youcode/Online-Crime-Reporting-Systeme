@@ -17,7 +17,6 @@
      <ul class="nav col-12 col-md-auto mb-2mb-md-0">
        <li><a href="{{ route('home') }}" class="nav-link px-2 text-white">  <i class="fas fa-home"></i> Home</a></li>
        <li><a href="{{ route('news') }}" class="nav-link px-2 text-white">News</a></li>
-       <li><a href="#" class="nav-link px-2 text-white">About</a></li>
  
      </ul>
  
@@ -42,7 +41,9 @@
  
   <main class="reporting">
 
-    <div class="text-center mt-5">
+    <a class="m-4 mt-2 btn btn-warning" href="{{ route('user') }}" > Back </a>
+
+    <div class="text-center mt-2">
       <h2>
         <span class="article">New Report</span>
       </h2>
@@ -72,7 +73,7 @@
                 <input type="title" name="victim_adresse" id="exampleFormControlFile1">
             </div>
             <div>
-              <label >Upload Image <span>*</span></label>
+              <label >Upload Image </label>
               <input class="upload" type="file" name="image" id="exampleFormControlFile1">
           </div>
         </div>

@@ -15,7 +15,7 @@ class ReportsController extends Controller
      */
     public function index()
     {
-        $rep = Reports::all();
+        $rep = Reports::select('id')->all();
         // return $rep;
         return view('reports.index',[
             'reps' => $rep
@@ -62,10 +62,10 @@ class ReportsController extends Controller
             "crime_type" => $rep->crime_type,
             "victim_name"=> $rep->victim_name,
             "victim_adresse"=> $rep->victim_adresse,
-            "discription"=> $rep->discription,
-            "victim_image" => $imageName ,
+            "discription"=> $rep->discription ??"",
+            "victim_image" => $imageName ?? "" ,
             "crime_date"=> $rep->date,
-            "reports_status"=>"your Raport under treatemnt" ,
+            "reports_status"=>"your Reporting under treatment" ,
 
             'user_id' => Auth::id()
         ]);
@@ -81,11 +81,12 @@ class ReportsController extends Controller
      * @param  \App\Models\reports  $reports
      * @return \Illuminate\Http\Response
      */
+    
     public function update_status(Request $req)
     {
         $reports = Reports::find($req->id);
         $reports->update([
-            'reports_status'=> 'In progress'
+            "reports_status"=> $req->reports_status,
         ]);
 
         return redirect()->back();

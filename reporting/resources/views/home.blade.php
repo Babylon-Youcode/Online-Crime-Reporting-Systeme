@@ -99,7 +99,7 @@
                   </div>
                   <div class="right-text">
                     <h4>Missing persons</h4>
-                    <p></p>
+                    <p> List of Missing persons, you can help us to find them , any information is important</p>
                   </div>
                 </div>
               </div>
@@ -155,9 +155,10 @@
       </div>
   
       <div class="col">
-        <h5>Important Links</h5>
+        <h5>Important Links</h5>  
         <ul class="nav flex-column">
           <li class="nav-item mb-2"><a href="www.maroc.ma" class="nav-link p-0 text-muted"> Maroc.ma</a></li>
+          <li class="nav-item mb-2"><a href="https://adala.justice.gov.ma/AR/home.aspx" class="nav-link p-0 text-muted"> Adala justice</a></li>
           <li class="nav-item mb-2"><a href="https://www.idarati.ma/" class="nav-link p-0 text-muted">idarati</a></li>
           <li class="nav-item mb-2"><a href="https://chikaya.ma/" class="nav-link p-0 text-muted">Chikaya</a></li>
           <li class="nav-item mb-2"><a href="https://emploi-public.ma/" class="nav-link p-0 text-muted">emploi-public</a></li>

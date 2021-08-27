@@ -45,13 +45,20 @@
     </div>
 
   <div class="container-fluid">
+
+    <a class="m-4 btn btn-warning" href="{{ route('user') }}" > Back </a>
+
+
     <div class="cards">
+      
       @foreach ($ans as $item)
       <div class="cards_item"> 
         <div class="card">
           <div class="card_image">
-            <img class="" src="{{asset('img/'.$item->image)}}" class="card-img-top"  height="300px"  alt="...">
-            <div class="card_content">
+              <img alt="Card image cap" src="{{asset('img/newsimages/'.$item->image)}}" class="img_th" >
+           
+           {{-- <img class="" src="{{asset('img/newsimages/'.$item->image)}}" class="card-img" alt="..."> --}}
+           <div class="card_content">
               <h2 class="card_title">{{$item->title}}</h2>
               <p class="card_text">{{$item->discription}}.</p>
               <div class="card_date">

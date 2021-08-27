@@ -41,34 +41,44 @@
     </div>
     
 <div class="container-fluid">
-    <div class="cards">
+  <a class="m-3 btn btn-warning" href="{{ route('user')}}}" > Back </a>
+
+    <div class="cards ">
         @foreach ($reps as $item)
 
       <div class="cards_item"> 
         <div class="card">
+
           <div>
-            <img class="card_image" src="{{asset('img/crimeimages/'.$item->victim_image)}}" height="100px" alt="...">  
+              <img class="img_th" src="{{asset('img/crimeimages/'.$item->victim_image)}}"  alt="">  
 
             <div class="card_content">
 
               <h2 class="card_title">Crime Type : {{$item->crime_type}}</h2>
               <h2 class="card_title"> Victim Name : {{$item->victim_name}}</h2>
               <h2 class="card_title"> Victim Adresse : {{$item->victim_adresse}}</h2>
-              <h2 class="card_title"> description</h2> 
+              <h3 class="card_title mt-2"> description</h3> 
               <p class="card_text">{{$item->discription}}.</p>
+
               <div class="card_date">
+
                 <small>Crime Date : {{$item->crime_date}} </small>
-                
+
               </div>
               
-              <button class="btn btn-light btn-lg mt-3">status:  {{$item->reports_status}}</button>
+              <button class="btn btn-light btn-lg mt-3 w-100" style="height: 80px;" >status:  {{$item->reports_status}}</button>
+              
+
             </div>
+
             
           </div>
         </div>
 
+
       </div>
       @endforeach
+
     </div>
 
 </div>
